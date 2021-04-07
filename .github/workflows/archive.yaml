@@ -1,0 +1,18 @@
+name: GitHub Archive
+
+on:
+  issues:
+  issue_comment:
+  pull_request:
+  pull_request_review:
+  pull_request_review_comment:
+  
+    
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Archive event
+        uses: githubocto/github-archive-action@main
