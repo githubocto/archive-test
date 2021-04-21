@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
+        with:
+          ref: 'github-meta'
 #       - name: Setup tmate session
 #         uses: mxschmitt/action-tmate@v3
       - name: Archive event
